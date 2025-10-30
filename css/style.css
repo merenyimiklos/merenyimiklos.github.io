@@ -1,57 +1,55 @@
-/* Alapok */
-:root { --brand:#0078d7; --bg:#ffffff; --fg:#222; --muted:#6c757d; }
-@media (prefers-color-scheme: dark) {
-:root { --bg:#0f0f12; --fg:#eaeaea; --muted:#a0a0a0; }
-}
-html,body{background:var(--bg);color:var(--fg);}
-body{scroll-behavior:smooth;}
+/* ===== style.css ===== */
 
 
-/* Scroll progress */
-#scrollProgress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--brand);z-index:2000;transition:width .1s linear;}
-
-
-/* Navbar */
-.navbar .nav-link{color:#444}
-.navbar .nav-link:hover{color:var(--brand)}
-
-
-/* Hero + parallax */
-.hero{min-height:70vh;position:relative;background:linear-gradient(135deg,#f8fbff 0%,#e9f2ff 100%);overflow:hidden}
-.hero::before{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse at top,#cde7ff 0%,transparent 60%),radial-gradient(ellipse at bottom,#dff1ff 0%,transparent 60%);transform:translateY(var(--parallax,0));transition:transform .1s linear}
-.hero-avatar{border:4px solid #66ccff}
-
-
-/* Reveal animáció */
-.section-reveal{opacity:0;transform:translateY(24px);transition:all .7s ease}
-.section-reveal.visible{opacity:1;transform:translateY(0)}
-
-
-/* Timeline */
-.timeline{position:relative;padding-left:24px}
-.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:#d0e3ff}
-.timeline-item{position:relative;margin:14px 0}
-.timeline-item .dot{position:absolute;left:-1px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--brand)}
-.timeline-item .content{padding-left:12px}
-
-
-/* Téma gomb animáció */
-#themeToggle{position:relative;overflow:hidden}
-#themeIcon{transition:transform .4s ease, rotate .4s ease}
-.theme-dark #themeIcon{transform:rotate(180deg)}
-
-
-/* Progress komponensek */
-.progress{height:10px;background:#eef5ff}
-.progress-bar{background:var(--brand)}
-
-
-/* Blog kártyák */
-.blog-card{background:#fff;border:1px solid #eef5ff;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-@media (prefers-color-scheme: dark){
-.blog-card{background:#13151a;border-color:#1f2430}
+body {
+scroll-behavior: smooth;
 }
 
 
-/* Footer */
-footer{background:var(--brand)}
+.hero {
+background: linear-gradient(135deg, #f9fbff 0%, #e8f1ff 100%);
+animation: fadeIn 1.2s ease;
+}
+
+
+.animate-fade {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.8s ease;
+}
+
+
+.animate-fade.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+
+.btn-primary {
+background-color: #0078d7;
+border-color: #0078d7;
+transition: 0.3s;
+}
+
+
+.btn-primary:hover {
+background-color: #005fa3;
+border-color: #005fa3;
+}
+
+
+section {
+animation: fadeSection 0.6s ease;
+}
+
+
+@keyframes fadeSection {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
