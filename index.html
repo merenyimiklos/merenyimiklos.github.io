@@ -3,133 +3,268 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merényi Miklós - Mobilfejlesztő Portfólió</title>
+  <title>Merényi Miklós – Szoftverfejlesztő & Oktató</title>
 
   <!-- SEO és Meta tag-ek -->
   <meta name="description" content="Merényi Miklós mérnökinformatikus és mobilfejlesztő portfóliója. Android, Kotlin, Flutter, WPF és modern webfejlesztés.">
   <meta name="keywords" content="Merényi Miklós, mobilfejlesztő, Android, Kotlin, Flutter, WPF, oktatás, Petrik, GreenGo, MÁV, Vodafone">
-  <meta property="og:title" content="Merényi Miklós - Mobilfejlesztő Portfólió">
+  <meta property="og:title" content="Merényi Miklós – Szoftverfejlesztő & Oktató">
   <meta property="og:description" content="Android fejlesztő, oktató és innovátor. Projektek, technológiák és tanulmányok.">
   <meta property="og:image" content="img/profilkep.jpg">
   <meta property="og:type" content="website">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="transition">
+<body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">Merényi Miklós</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" aria-label="Merényi Miklós">MM</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Navigáció megnyitása" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Rólam</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Technológiák</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Tapasztalat</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projektek</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Kapcsolat</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Rólam</a></li>
+        <li><a href="#skills">Technológiák</a></li>
+        <li><a href="#experience">Tapasztalat</a></li>
+        <li><a href="#projects">Projektek</a></li>
+        <li><a href="#contact" class="nav-cta">Kapcsolat</a></li>
+      </ul>
     </div>
   </nav>
 
-  <header class="hero d-flex align-items-center justify-content-center text-center">
-    <div class="container py-5">
-      <img src="img/profilkep.jpg" class="rounded-circle shadow-lg mb-4 animate-fade" width="180" height="180" alt="Merényi Miklós portré">
-      <h1 class="display-5 fw-bold text-primary">Merényi Miklós</h1>
-      <p id="typewriter" class="lead text-secondary"></p>
-      <div class="mt-3">
-        <a href="#contact" class="btn btn-primary btn-lg px-4 me-2">Kapcsolatfelvétel</a>
-        <a href="cv_merenyi_miklos.pdf" class="btn btn-outline-primary btn-lg px-4" target="_blank">Letölthető önéletrajz</a>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-badge fade-up">Szoftverfejlesztő &amp; Oktató</div>
+      <h1 class="hero-title fade-up">Merényi Miklós</h1>
+      <p class="hero-subtitle fade-up">
+        Android &amp; Flutter fejlesztő, informatikai oktató.<br>
+        Szenvedélyem a <span class="highlight">kód</span>, az <span class="highlight">oktatás</span> és az <span class="highlight">innováció</span>.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="#contact" class="btn btn-primary">Kapcsolatfelvétel</a>
+        <a href="cv_merenyi_miklos.pdf" class="btn btn-ghost" target="_blank">
+          <i class="fa-solid fa-download"></i> Letölthető önéletrajz
+        </a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main class="mt-5 pt-4">
-    <section id="about" class="container py-5">
-      <h2 class="text-primary mb-4">Rólam</h2>
-      <p>Innovatív fejlesztő és oktató vagyok, aki elkötelezett a modern mobilalkalmazás-fejlesztés és az oktatás iránt. Több mint öt éve tanítok programozást, miközben aktívan dolgozom Android, Flutter, WPF és webfejlesztési projekteken. Célom, hogy a technológia és az oktatás találkozásából valódi érték szülessen.</p>
-    </section>
-
-    <section id="skills" class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-primary mb-4">Technológiák</h2>
-        <div class="row g-3">
-          <div class="col-md-3 col-6 text-center animate-fade"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" width="40"><p>Kotlin</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><img src="https://storage.googleapis.com/cms-storage-bucket/images/flutter_logo.width-635.png" width="60"><p style="margin-top: 1rem;">Flutter</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><i class="fa-brands fa-android fa-2x text-primary"></i><p>Android</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><i class="fa-brands fa-java fa-2x text-primary"></i><p>Java</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><i class="fa-brands fa-angular fa-2x text-primary"></i><p>Angular</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><i class="fa-solid fa-code fa-2x text-primary"></i><p>C# / WPF</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><i class="fa-brands fa-python fa-2x text-primary"></i><p>Python</p></div>
-          <div class="col-md-3 col-6 text-center animate-fade"><i class="fa-brands fa-github fa-2x text-primary"></i><p>Git / GitHub</p></div>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-up">
+          <img src="img/profilkep.jpg" alt="Merényi Miklós" class="profile-img">
         </div>
-      </div>
-    </section>
-
-    <section id="experience" class="container py-5">
-      <h2 class="text-primary mb-4">Tapasztalat</h2>
-      <div class="mb-4 animate-fade">
-        <h4>Offsite Solutions Informatikai Szolgáltató Kft.</h4>
-        <p class="mb-1"><strong>Szoftverfejlesztő</strong> | 2022 – 2025</p>
-        <p>Fejlesztőként dolgozom a GreenGo és MÁV mobilalkalmazásokon, valamint a Vodafone webes fejlesztési projektjein Angular környezetben.</p>
-      </div>
-      <div class="animate-fade">
-        <h4>BMSZC Petrik Lajos Két Tanítási Nyelvű Technikum</h4>
-        <p class="mb-1"><strong>Informatikai szakmai oktató</strong> | 2017 – jelenleg</p>
-        <p>Oktatás, mentorálás, versenyfelkészítés (WRO, ProSuli, Prograce). Tananyagfejlesztés Android, WPF és IoT témákban.</p>
-        <ul>
-          <li>KÖBÜKI ösztöndíj minden évben</li>
-          <li>Pécsi Eszter tanári ösztöndíj (2025)</li>
-          <li>Szegedi Innovatív Informatika verseny 1. hely (2024)</li>
-          <li>Prograce Pécs 1., 2. és 3. hely (2023–2024)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-primary mb-4">Projektek</h2>
-        <div class="row g-4">
-          <div class="col-md-6 animate-fade">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h5 class="card-title text-primary">Android Jetpack Compose – Alapoktól Mesterig</h5>
-                <p>32 hetes oktatási program Kotlin, Compose, Material3 és MVVM technológiákkal. Diákoknak és tanároknak készült tananyag.</p>
-              </div>
+        <div class="about-content fade-up">
+          <span class="section-label">Rólam</span>
+          <h2 class="section-title">Innovatív fejlesztő és <span class="highlight">oktató</span></h2>
+          <p class="about-text">
+            Elkötelezett vagyok a modern mobilalkalmazás-fejlesztés és az oktatás iránt. Több mint öt éve tanítok programozást, miközben aktívan dolgozom Android, Flutter, WPF és webfejlesztési projekteken.
+          </p>
+          <p class="about-text">
+            Célom, hogy a technológia és az oktatás találkozásából valódi érték szülessen.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">év oktatás</span>
             </div>
-          </div>
-          <div class="col-md-6 animate-fade">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h5 class="card-title text-primary">Home Assistant Dashboard</h5>
-                <p>Raspberry Pi alapú otthonvezérlő rendszer egyedi Lovelace és Mushroom UI-val, Cloudflare tunnel és merenyi.family domain integrációval.</p>
-              </div>
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">év fejlesztés</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">díj &amp; ösztöndíj</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="container py-5">
-      <h2 class="text-primary mb-4">Kapcsolat</h2>
-      <ul class="list-unstyled">
-        <li><i class="fa-solid fa-envelope text-primary"></i> <a href="mailto:merenyi.miklos@petrik.hu">merenyi.miklos@petrik.hu</a></li>
-        <li><i class="fa-solid fa-envelope text-primary"></i> <a href="mailto:miklos.merenyi@offsite-solutions.com">miklos.merenyi@offsite-solutions.com</a></li>
-        <li><i class="fa-brands fa-github text-primary"></i> <a href="https://github.com/merenyimiklos" target="_blank">github.com/merenyimiklos</a></li>
-        <li><i class="fa-brands fa-linkedin text-primary"></i> <a href="https://www.linkedin.com/in/merenyi-miklos/" target="_blank">linkedin.com/in/merenyi-miklos</a></li>
-        <li><i class="fa-solid fa-phone text-primary"></i> +36 70 371 4288</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <span class="section-label">Technológiák</span>
+      <h2 class="section-title">Tech stack</h2>
+      <div class="skills-grid">
+        <div class="skill-card fade-up">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin" class="skill-icon-img">
+          <span>Kotlin</span>
+        </div>
+        <div class="skill-card fade-up">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/images/flutter_logo.width-635.png" alt="Flutter" class="skill-icon-img">
+          <span>Flutter</span>
+        </div>
+        <div class="skill-card fade-up">
+          <i class="fa-brands fa-android skill-icon"></i>
+          <span>Android</span>
+        </div>
+        <div class="skill-card fade-up">
+          <i class="fa-brands fa-java skill-icon"></i>
+          <span>Java</span>
+        </div>
+        <div class="skill-card fade-up">
+          <i class="fa-brands fa-angular skill-icon"></i>
+          <span>Angular</span>
+        </div>
+        <div class="skill-card fade-up">
+          <i class="fa-solid fa-code skill-icon"></i>
+          <span>C# / WPF</span>
+        </div>
+        <div class="skill-card fade-up">
+          <i class="fa-brands fa-python skill-icon"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-card fade-up">
+          <i class="fa-brands fa-github skill-icon"></i>
+          <span>Git / GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="bg-primary text-white text-center py-3 mt-5">
-    <p class="mb-0">© 2025 Merényi Miklós | Mobilfejlesztő & Oktató</p>
-    <small>Kód, oktatás, innováció – mindennap.</small>
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <span class="section-label">Tapasztalat</span>
+      <h2 class="section-title">Szakmai előzmények</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Offsite Solutions Informatikai Kft.</h3>
+              <span class="timeline-period">2022 – 2025</span>
+            </div>
+            <p class="timeline-role">Szoftverfejlesztő</p>
+            <p>Fejlesztőként dolgoztam a GreenGo és MÁV mobilalkalmazásokon, valamint a Vodafone webes fejlesztési projektjein Angular környezetben.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>BMSZC Petrik Lajos Technikum</h3>
+              <span class="timeline-period">2017 – jelenleg</span>
+            </div>
+            <p class="timeline-role">Informatikai szakmai oktató</p>
+            <p>Oktatás, mentorálás, versenyfelkészítés (WRO, ProSuli, Prograce). Tananyagfejlesztés Android, WPF és IoT témákban.</p>
+            <ul class="achievement-list">
+              <li>KÖBÜKI ösztöndíj minden évben</li>
+              <li>Pécsi Eszter tanári ösztöndíj (2025)</li>
+              <li>Szegedi Innovatív Informatika verseny 1. hely (2024)</li>
+              <li>Prograce Pécs 1., 2. és 3. hely (2023–2024)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <span class="section-label">Projektek</span>
+      <h2 class="section-title">Kiemelt munkák</h2>
+      <div class="projects-grid">
+        <div class="project-card fade-up">
+          <div class="project-icon">
+            <i class="fa-brands fa-android"></i>
+          </div>
+          <h3>Android Jetpack Compose – Alapoktól Mesterig</h3>
+          <p>32 hetes oktatási program Kotlin, Compose, Material3 és MVVM technológiákkal. Diákoknak és tanároknak készült tananyag.</p>
+          <div class="project-tags">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">MVVM</span>
+          </div>
+        </div>
+        <div class="project-card fade-up">
+          <div class="project-icon">
+            <i class="fa-solid fa-house-signal"></i>
+          </div>
+          <h3>Home Assistant Dashboard</h3>
+          <p>Raspberry Pi alapú otthonvezérlő rendszer egyedi Lovelace és Mushroom UI-val, Cloudflare tunnel és merenyi.family domain integrációval.</p>
+          <div class="project-tags">
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">Home Assistant</span>
+            <span class="tag">Cloudflare</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <span class="section-label">Kapcsolat</span>
+      <h2 class="section-title">Írj nekem</h2>
+      <p class="contact-subtitle">Nyitott vagyok új lehetőségekre, együttműködésekre és kérdésekre.</p>
+      <div class="contact-grid">
+        <a href="mailto:merenyi.miklos@petrik.hu" class="contact-card fade-up">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span class="contact-label">Petrik e-mail</span>
+            <span class="contact-value">merenyi.miklos@petrik.hu</span>
+          </div>
+        </a>
+        <a href="mailto:miklos.merenyi@offsite-solutions.com" class="contact-card fade-up">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span class="contact-label">Offsite e-mail</span>
+            <span class="contact-value">miklos.merenyi@offsite-solutions.com</span>
+          </div>
+        </a>
+        <a href="https://github.com/merenyimiklos" target="_blank" rel="noopener noreferrer" class="contact-card fade-up">
+          <i class="fa-brands fa-github"></i>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/merenyimiklos</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/merenyi-miklos/" target="_blank" rel="noopener noreferrer" class="contact-card fade-up">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/merenyi-miklos</span>
+          </div>
+        </a>
+        <a href="tel:+36703714288" class="contact-card fade-up">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span class="contact-label">Telefon</span>
+            <span class="contact-value">+36 70 371 4288</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-logo">Merényi Miklós</span>
+        <span class="footer-copy">© 2025 · Mobilfejlesztő &amp; Oktató</span>
+        <div class="footer-links">
+          <a href="https://github.com/merenyimiklos" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/merenyi-miklos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <p class="footer-tagline">Kód, oktatás, innováció – mindennap.</p>
+    </div>
   </footer>
 
   <!-- Google Analytics előkészítés -->
@@ -141,7 +276,6 @@
     gtag('config', 'YOUR_TRACKING_ID');
   </script> -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
